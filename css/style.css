@@ -1,0 +1,55 @@
+html, body {
+  height: 100%;
+  background-color: #39BBC6;
+}
+
+body {
+  margin: 0px;
+}
+
+canvas {
+  overflow:hidden;
+  margin: 0px;
+  padding: 0px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 10px;
+  z-index: 2;
+  background-color: #FFFFFF;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 3px 10px 0px rgba(0,0,0,0.25);
+}
+
+.overlay > i {
+  /* font-size: 2rem; /*32*/
+  font-size: 20pt;
+  margin: 0px 5px;
+  color: #4CAF50;
+}
+
+.fab {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background-color: #F44336;
+  border-radius: 50%;
+  box-shadow: 2px 3px 10px 0px rgba(0,0,0,0.25);
+}
+
+.fab > i {
+  color: #FFFFFF;
+  margin: 20px;
+}
+
+.pac-container {
+  z-index: 100000;
+}
+
+#vibration-indicator {
+  color: #E0E0E0;
+}

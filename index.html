@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>compass</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" sizes="512x512" type="image/png" href="/img/compass-icon-512.png">
+</head>
+<body>
+  <div class="overlay">
+    <i id="compass-indicator" class="fas fa-compass"></i>
+    <i id="beep-indicator" class="fas fa-volume-up"></i>
+  </div>
+
+  <noscript>Sorry, compass needs Javascript to run.</noscript>
+  <canvas id="arrow-canvas"></canvas>
+  <p id="output-text" style="margin:auto;width:50%;"></p>
+
+  <script>
+    if('serviceWorker' in navigator){
+      navigator.serviceWorker.register('sw.js').then((registration) => {
+        console.log("SW Registered");
+      }).catch((err) => {
+        console.log(err);
+      });
+    }
+  </script>
+  <script type="module" src="js/canvas.mod.js"></script>
+  <script type="module" src="js/position.mod.js"></script>
+  <script type="module" src="js/beep.mod.js"></script>
+  <script type="module" src="js/index.js"></script>
+</body>
+</html>
